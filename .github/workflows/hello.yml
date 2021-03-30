@@ -27,14 +27,11 @@ jobs:
     working-directory: hello-world
   
   steps: 
-  - uses: actions/checkout@v1
-  - nano: deploy
-  run: deploy
-  -uses: actions/checkout@v1
 
-    steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
+      - nano: deploy
+        run: deploy
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
@@ -44,4 +41,4 @@ jobs:
       - name: Run a multi-line script
         run: |
           echo Add other actions to build,
-          echo test, and deploy your project.
+          echo goodbye
